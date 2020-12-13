@@ -1,0 +1,19 @@
+{
+  "name": "loggerjs",
+  "version": "1.0.0",
+  "description": "This is a simple code for logging tool",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alestor123/LOGGER-JS.git"
+  },
+  "author": "Alestor Aldous",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alestor123/LOGGER-JS/issues"
+  },
+  "homepage": "https://github.com/alestor123/LOGGER-JS#readme"
+}
