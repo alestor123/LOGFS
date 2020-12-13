@@ -13,5 +13,7 @@ loggerjs.warn = (message) => {
 loggerjs.error = (message) => {
     console.error(chalk.red('(ERROR): ' + Date() + ': '  + message))
 }
-
+loggerjs.emergency = (message) => {
+    console.error(chalk.bgYellow.red('(EMERGENCY): ' + Date() + ': '  + message))
+}
 module.exports = loggerjs
