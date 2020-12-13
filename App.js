@@ -1,5 +1,3 @@
-const { settings } = require('cluster');
-
 var chalk = require('chalk'),
 options = JSON,
 fs = require('fs');
@@ -33,11 +31,13 @@ var emergency = chalk.bgYellow.red('(EMERGENCY): ' + Date() + ': '  + message);
 console.error(emergency)
 fsLog(emergency)
 }
+
 // settings
 loggerjs.set = (option) => {
 options = option
 loggerMsg('OPTIONS FOUND')
 }
+
 // main logging for the logger 
 function loggerMsg(message){
     console.log(chalk.bgWhite.green('(LOGGER) : ' + Date() + ': ' + message))
@@ -49,5 +49,9 @@ fs.appendFile(options.fileName||'logs.log',`\n ${logText} \n` , (err) => {
     if (err) throw err;
   });
     }
+}
+// remove log 
+loggerjs.removeLog = () => {
+    fs.unlinkSync(options.fileName || 'logs.log')
 }
 module.exports = loggerjs
