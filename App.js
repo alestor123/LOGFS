@@ -5,13 +5,13 @@ var loggerjs = (message) => {
 }
 
 loggerjs.info = (message) => {
-    console.log(chalk.blue('(INFO): ' + Date() + ': '  + message))
+    console.info(chalk.blue('(INFO): ' + Date() + ': '  + message))
 }
 loggerjs.warn = (message) => {
-    console.log(chalk.yellow('(WARN): ' + Date() + ': '  + message))
+    console.warn(chalk.yellow('(WARN): ' + Date() + ': '  + message))
 }
 loggerjs.error = (message) => {
-    console.log(chalk.red('(ERROR): ' + Date() + ': '  + message))
+    console.error(chalk.red('(ERROR): ' + Date() + ': '  + message))
 }
 
 module.exports = loggerjs
