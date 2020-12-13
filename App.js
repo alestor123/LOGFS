@@ -52,6 +52,9 @@ fs.appendFile(options.fileName||'logs.log',`\n ${logText} \n` , (err) => {
 }
 // remove log 
 loggerjs.removeLog = () => {
+    cleanLog()
+}
+function cleanLog(){
     fs.unlinkSync(options.fileName || 'logs.log')
 }
 module.exports = loggerjs

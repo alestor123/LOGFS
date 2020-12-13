@@ -1,5 +1,5 @@
 {
-  "name": "loggerjs",
+  "name": "logfs",
   "version": "1.0.0",
   "description": "This is a simple code for logging tool",
   "main": "App.js",
