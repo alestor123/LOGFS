@@ -4,31 +4,32 @@ fs = require('fs');
 
 // log
 var loggerjs = (message) => {
-    var log = chalk.green('(LOG): ' + Date() + ': '  + message)
-    console.log(log)
+    var log = '(LOG): ' + Date() + ': '  + message
+    console.log(chalk.green(log))
+    fsLog(log)
 }
 // info
 loggerjs.info = (message) => {
-    var info = chalk.blue('(INFO): ' + Date() + ': '  + message)
-    console.info(info)
+    var info = '(INFO): ' + Date() + ': '  + message
+    console.info(chalk.blue(info))
     fsLog(info)
 }
 // warn
 loggerjs.warn = (message) => {
-var warn = chalk.yellow('(WARN): ' + Date() + ': '  + message)
-console.warn(warn)
+var warn = '(WARN): ' + Date() + ': '  + message
+console.warn(chalk.yellow(warn))
 fsLog(warn)
 }
 // error
 loggerjs.error = (message) => {
-var error = chalk.red('(ERROR): ' + Date() + ': '  + message);
-console.error(error)
+var error = '(ERROR): ' + Date() + ': '  + message;
+console.error(chalk.red(error))
 fsLog(error)
 }
 // emergency
 loggerjs.emergency = (message) => {
-var emergency = chalk.bgYellow.red('(EMERGENCY): ' + Date() + ': '  + message);
-console.error(emergency)
+var emergency = '(EMERGENCY): ' + Date() + ': '  + message;
+console.error(chalk.bgYellow.red(emergency))
 fsLog(emergency)
 }
 
