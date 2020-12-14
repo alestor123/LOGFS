@@ -2,8 +2,9 @@ var chalk = require('chalk'),
 options = JSON,
 fs = require('fs');
 
+// spegetti code 
 // log
-var loggerjs = (message) => {
+function loggerjs (message) {
     var log = '(LOG): ' + Date() + ': '  + message
     console.log(chalk.green(log))
     fsLog(log)
@@ -20,12 +21,16 @@ var warn = '(WARN): ' + Date() + ': '  + message
 console.warn(chalk.yellow(warn))
 fsLog(warn)
 }
+
+
 // error
 loggerjs.error = (message) => {
 var error = '(ERROR): ' + Date() + ': '  + message;
 console.error(chalk.red(error))
 fsLog(error)
 }
+
+
 // emergency
 loggerjs.emergency = (message) => {
 var emergency = '(EMERGENCY): ' + Date() + ': '  + message;
@@ -51,6 +56,10 @@ fs.appendFile(options.fileName||'logs.log',`\n ${logText} \n` , (err) => {
   });
     }
 }
+
+
+
+
 // remove log 
 loggerjs.removeLog = () => {
     cleanLog()
@@ -58,4 +67,8 @@ loggerjs.removeLog = () => {
 function cleanLog(){
     fs.unlinkSync(options.fileName || 'logs.log')
 }
+
+
+
+// exporting module 
 module.exports = loggerjs
