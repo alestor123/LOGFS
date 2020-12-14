@@ -18,5 +18,8 @@
   "homepage": "https://github.com/alestor123/LOGGER-JS#readme",
   "dependencies": {
     "chalk": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.13"
   }
 }

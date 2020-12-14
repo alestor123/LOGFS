@@ -4,7 +4,7 @@ fs = require('fs');
 
 // spegetti code 
 // log
-function loggerjs (message) {
+function logger(message) {
     var log = '(LOG): ' + Date() + ': '  + message
     console.log(chalk.green(log))
     fsLog(log)
