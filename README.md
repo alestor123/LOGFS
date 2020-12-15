@@ -13,7 +13,7 @@
 # 
 > This is a simple code for logging tool
 <p align=center>
-<a href="https://npmjs.org/package/log-fs">
+<a href="https://npmjs.org/package/logfs">
 <img src="https://nodei.co/npm/log-fs.png"></a>
 </p>
 
